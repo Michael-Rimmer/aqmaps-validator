@@ -7,8 +7,8 @@ class MoveLengthValidator():
         try:
             start_long = float(move[1])
             start_lat = float(move[2])
-            end_long = float(move[3])
-            end_lat = float(move[4])
+            end_long = float(move[4])
+            end_lat = float(move[5])
 
             distance = math.sqrt((start_long-end_long) ** 2 + (start_lat-end_lat) ** 2)
 

@@ -66,14 +66,23 @@ class FlightValidator():
                 self.output += f"---------------------\n"
 
 
-        self.output += f"{num_valid}/{len(self.flights)} flights successful"
+        self.output += f"{num_valid}/{len(self.flights)} flights successful\n"
+        self.output += f"Average number of moves = {self.compute_avg_num_moves()}\n"
+
         print(self.output)
         return self.output
-
 
     def output_to_file(self, filename):
         with open(filename, 'w') as outfile:
             outfile.write(self.print_output())
+
+    def compute_avg_num_moves(self):
+        sum = 0
+        for flight_file, flight in self.flights.items():
+            sum += flight.num_moves
+
+        return sum / len(self.flights)
+
 
 if __name__ == '__main__':
 

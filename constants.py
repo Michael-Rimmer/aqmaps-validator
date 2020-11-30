@@ -1,4 +1,4 @@
-DRONE_START = (-3.192173, 55.945933)
+DRONE_START = (-3.1878,55.9444)
 
 HTTP_BASE_URL = 'http://localhost:80'
 
@@ -12,4 +12,5 @@ CAMPUS_BOUNDARY_MIN_LAT = 55.942617
 CAMPUS_BOUNDARY_MAX_LONG = -3.184319
 CAMPUS_BOUNDARY_MAX_LAT = 55.946233
 
-DRONE_MOVE_FORMAT_REGEX = r"\d*,-?\d*.\d*,-?\d*.\d*,-?\d*.\d*,-?\d*.\d*,(null|\w*.\w*.\w*)\n?"
+# Does not validate angle value
+DRONE_MOVE_FORMAT_REGEX = r"\d*,-?\d*.\d*,-?\d*.\d*,\d+,-?\d*.\d*,-?\d*.\d*,(null|\w*.\w*.\w*)\n?"
